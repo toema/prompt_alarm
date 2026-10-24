@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PromptAlarm: scheduled prompts for Claude, ChatGPT and Gemini</title>
+<meta name="description" content="Schedule a prompt for your AI chat and retry until your usage limit resets. Local only, no account, no tracking.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="hero">
+ <div class="wrap">
+  <header class="top">
+   <a class="brand" href="./"><img src="assets/icon.png" alt="">PromptAlarm</a>
+   <nav><a href="#how">How it works</a><a href="#features">Features</a><a href="privacy.html">Privacy</a><a href="https://github.com/toema/prompt_alarm">GitHub</a></nav>
+  </header>
+  <div class="grid">
+   <div>
+    <h1>Your usage limit resets while you sleep. Your next prompt can already be waiting.</h1>
+    <p class="lead">Pick a chat, a time and a prompt. PromptAlarm sends it for you, and tries again until your Claude, ChatGPT or Gemini limit resets.</p>
+    <!-- Replace this link with your Chrome Web Store page once it is published -->
+    <a class="btn primary" href="https://github.com/toema/prompt_alarm">Add to Chrome</a>
+    <a class="btn ghost" href="https://github.com/toema/prompt_alarm">View the source</a>
+   </div>
+   <div class="run" aria-label="Example of one scheduled run">
+    <h2>One run, as it appears in History</h2>
+    <ol>
+     <li><time>05:00</time><span>Limit still active. Waiting.</span></li>
+     <li><time>05:10</time><span>Limit still active. Waiting.</span></li>
+     <li><time>05:20</time><span>The page says it resets at 7:00 AM.</span></li>
+     <li class="ok"><time>07:01</time><span>Prompt sent.</span></li>
+    </ol>
+    <small>Example times. Yours follow the schedule you set.</small>
+   </div>
+  </div>
+ </div>
+</div>
+
+<main>
+<section id="how"><div class="wrap">
+ <h2 class="s">How it works</h2>
+ <div class="how">
+  <div><h3>Choose the chat</h3><p>Paste the link of the conversation you want to continue, from claude.ai, chatgpt.com or gemini.google.com.</p></div>
+  <div><h3>Set the time and prompt</h3><p>Once or every day, in any time zone. Add follow-up prompts that go out after each reply finishes.</p></div>
+  <div><h3>Leave Chrome open</h3><p>At the time you chose, PromptAlarm opens the chat, types the prompt and presses send, the way you would.</p></div>
+ </div>
+</div></section>
+
+<section id="features" style="padding-top:0"><div class="wrap">
+ <h2 class="s">What you get</h2>
+ <div class="feat">
+  <div><h3>Retries until the limit resets</h3><p>If a limit is still active, it tries again on an interval and inside a time window you control.</p></div>
+  <div><h3>Reads the reset time from the site</h3><p>One button reads the time from the site's own limit notice and sets your schedule to match. Repeating schedules can follow it automatically.</p></div>
+  <div><h3>Never sends twice</h3><p>Every step is saved, so after a restart it checks the page before sending again. It never overwrites text you already typed.</p></div>
+  <div><h3>Catches up after a closed browser</h3><p>Missed the time? It runs within the grace period you set, or tells you plainly that it was missed.</p></div>
+  <div><h3>Plain-language history</h3><p>Sent, not sent and why, or missed. No guessing what happened overnight.</p></div>
+  <div><h3>Private by design</h3><p>No account, no server, no analytics. Schedules and history stay in your browser, and replies are never read or stored.</p></div>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <h2 class="s">Inside the extension</h2>
+ <div class="shots">
+  <figure><img src="assets/schedules.png" alt="The PromptAlarm schedules page with three example schedules" loading="lazy"><figcaption>Your schedules and the next run.</figcaption></figure>
+  <figure><img src="assets/editor.png" alt="The schedule editor with the option to read the reset time from the site" loading="lazy"><figcaption>The editor, with the reset-time reader.</figcaption></figure>
+ </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+ <div class="note">
+  <h2 class="s" style="font-size:22px;margin-bottom:6px">Good to know</h2>
+  <ul>
+   <li>Chrome must be open and the computer awake at the scheduled time. An optional keep-awake setting helps.</li>
+   <li>PromptAlarm cannot get around a usage limit. It sends your prompt when the site lets you send it.</li>
+   <li>The reset time can only be read while the site is showing a usage-limit notice.</li>
+   <li>Chat sites change often. If the message box cannot be found, PromptAlarm tells you instead of guessing.</li>
+  </ul>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <p><a href="privacy.html">Privacy policy</a> &nbsp;|&nbsp; <a href="https://github.com/toema/prompt_alarm">Source code</a> &nbsp;|&nbsp; <a href="https://github.com/toema/prompt_alarm/issues">Report an issue</a> &nbsp;|&nbsp; <a href="mailto:m.toema20@gmail.com">m.toema20@gmail.com</a></p>
+ <p>PromptAlarm is an independent project. It is not affiliated with, endorsed by or sponsored by Anthropic, OpenAI or Google. Claude, ChatGPT and Gemini are trademarks of their owners. Check each service's terms of use before you automate anything.</p>
+</div></footer>
+</body>
+</html>

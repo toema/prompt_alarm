@@ -1,0 +1,51 @@
+:root{--paper:#f3f5fb;--surface:#fff;--line:#dde2f0;--ink:#151b3b;--ink2:#4a5273;--night:#1a2150;--dawn:#f2a24b;--signal:#3647c9;--good:#7fe0ae}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Avenir Next","Segoe UI",system-ui,sans-serif}
+a{color:var(--signal)}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--dawn);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+header.top a.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:650;font-size:19px}
+header.top img{width:32px;height:32px}
+header.top nav a{color:#c9d0f5;margin-left:22px;text-decoration:none;font-size:15px}
+header.top nav a:hover{color:#fff}
+.hero{background:var(--night);color:#e8ebff;padding-bottom:72px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding-top:40px}
+h1{font:650 clamp(34px,5vw,54px)/1.08 "Avenir Next","Segoe UI",system-ui,sans-serif;letter-spacing:-.02em;margin:0 0 20px;text-wrap:balance}
+.hero p.lead{color:#aeb6e6;font-size:19px;max-width:30em;margin:0 0 28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:650;text-decoration:none;margin:0 10px 10px 0}
+.btn.primary{background:var(--dawn);color:#2a1a00}
+.btn.ghost{border:1.5px solid #5b66b0;color:#e8ebff}
+.btn:hover{filter:brightness(1.08)}
+.run{background:#252d63;border-radius:14px;padding:22px 24px;font-size:15px}
+.run h2{margin:0 0 14px;font-size:15px;font-weight:600;color:#aeb6e6}
+.run ol{list-style:none;margin:0;padding:0}
+.run li{display:grid;grid-template-columns:76px 1fr;gap:10px;padding:9px 0;border-top:1px solid #38417d}
+.run li:first-child{border-top:0}
+.run time{font-variant-numeric:tabular-nums;color:var(--dawn);font-weight:650}
+.run li.ok{color:var(--good);font-weight:650}
+.run small{display:block;color:#8e97cf;margin-top:12px;font-size:13px}
+section{padding:64px 0}
+h2.s{font:650 30px/1.15 "Avenir Next","Segoe UI",system-ui,sans-serif;letter-spacing:-.01em;margin:0 0 26px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.how h3,.feat h3{margin:0 0 6px;font-size:18px}
+.how p,.feat p{margin:0;color:var(--ink2)}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 56px}
+.feat>div{border-left:3px solid var(--dawn);padding-left:16px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.shots img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+.shots figcaption{color:var(--ink2);font-size:15px;margin-top:8px}
+.shots figure{margin:0}
+.note{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 26px}
+.note ul{margin:8px 0 0;padding-left:20px;color:var(--ink2)}
+footer{background:var(--night);color:#aeb6e6;padding:36px 0;font-size:15px}
+footer a{color:#e8ebff}
+footer p{margin:6px 0;max-width:46em}
+.doc{max-width:760px;padding:48px 24px 72px;margin:0 auto}
+.doc h1{font-size:36px;color:var(--ink)}
+.doc h2{margin-top:36px;font-size:22px}
+.doc table{border-collapse:collapse;width:100%;font-size:15px}
+.doc th,.doc td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.doc code{background:#e8ebfb;padding:1px 5px;border-radius:4px;font-size:.9em}
+@media(max-width:760px){.hero .grid,.how,.feat,.shots{grid-template-columns:1fr}.hero .grid{gap:36px}}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PromptAlarm Privacy Policy</title><link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"></head>
+<body><div class="hero" style="padding-bottom:0"><div class="wrap"><header class="top"><a class="brand" href="./"><img src="assets/icon.png" alt="">PromptAlarm</a><nav><a href="./">Home</a><a href="https://github.com/toema/prompt_alarm">GitHub</a></nav></header></div></div>
+<main class="doc"><h1>PromptAlarm Privacy Policy</h1>
+<p><em>Last updated: 23 October 2026</em></p>
+<p>PromptAlarm is a browser extension that sends a prompt you wrote to a chat page you chose, at a time you chose. It is open source and works entirely inside your browser.</p>
+<h2>The short version</h2>
+<ul>
+<li>PromptAlarm has <strong>no server, no account and no analytics</strong>. It does not send any data to its developers or to any third party.</li>
+<li>Everything it keeps stays in your browser&#39;s local extension storage on your computer.</li>
+<li>It does not read, copy or store the replies you receive.</li>
+</ul>
+<h2>What PromptAlarm stores on your computer</h2>
+<p>This data is saved with <code>chrome.storage.local</code> and never leaves your device:</p>
+<ul>
+<li>Your schedules: name, chat link, time, days, time zone, the prompt text you wrote, and retry settings.</li>
+<li>A history of runs: when each run was due, whether it was sent, and the reason if it was not, plus the time of each attempt. History does not include your prompts or any replies. It is deleted automatically after the number of days you choose (30 by default), and you can clear it at any time.</li>
+<li>Your settings, such as the pause switch, keep-awake and notifications.</li>
+</ul>
+<p>You can export your schedules to a file, import them back, or delete them in the extension at any time. Removing the extension deletes everything it stored.</p>
+<h2>What PromptAlarm does on chat websites</h2>
+<p>When a run is due, PromptAlarm opens your chat link, and then:</p>
+<ul>
+<li>It looks at the page to find the message box and the send button, and to check whether you are signed in.</li>
+<li>It checks the page for a usage-limit notice. The text of that notice is used in the page only to decide whether to wait and retry. It is not saved or sent anywhere. If you use &quot;Read the reset time from the site&quot;, or turn on &quot;Keep this time in step with the site&#39;s reset time&quot;, the reset time found in that notice is turned into a time of day and saved in your schedule. The notice text itself is still not stored.</li>
+<li>It types your prompt into the message box and presses send, the way you would.</li>
+<li>If you chose to wait for the reply, it watches whether the reply is still being written. It measures only whether the reply is still changing, not what it says.</li>
+</ul>
+<p>PromptAlarm only acts on the chat sites you approve (claude.ai, chatgpt.com, chat.openai.com and gemini.google.com). Chrome asks for your permission for each site when you save a schedule or read its reset time, and you can remove that permission at any time in Chrome&#39;s extension settings.</p>
+<h2>Permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Why it is needed</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>alarms</code></td>
+<td>Wake the extension at the scheduled time and for retries.</td>
+</tr>
+<tr>
+<td><code>storage</code></td>
+<td>Keep your schedules, history and settings on your computer.</td>
+</tr>
+<tr>
+<td><code>scripting</code></td>
+<td>Add the small script that types the prompt into the chat page you approved.</td>
+</tr>
+<tr>
+<td><code>activeTab</code></td>
+<td>Let the popup read the address of the tab you have open, so it can offer to schedule that chat or check it when you press &quot;Check this page&quot;.</td>
+</tr>
+<tr>
+<td>Site access (optional)</td>
+<td>Needed only for the chat sites you approve, so the extension can type into them.</td>
+</tr>
+<tr>
+<td><code>notifications</code> (optional)</td>
+<td>Only if you turn on notifications.</td>
+</tr>
+<tr>
+<td><code>power</code> (optional)</td>
+<td>Only if you turn on &quot;Keep the computer awake&quot;.</td>
+</tr>
+</tbody></table>
+<h2>Third parties and chat services</h2>
+<p>The chat services you use (for example Anthropic, OpenAI or Google) receive your prompt in the same way as if you had typed it yourself, and their own privacy policies apply to that. PromptAlarm is not affiliated with, endorsed by or sponsored by any of them.</p>
+<h2>Children</h2>
+<p>PromptAlarm does not collect personal information from anyone, including children.</p>
+<h2>Changes</h2>
+<p>If this policy changes, the new version will be published in the project repository with a new date at the top, and the extension&#39;s release notes will say so.</p>
+<h2>Contact</h2>
+<p>Questions or concerns: open an issue in the project repository at <a href="https://github.com/toema/prompt_alarm/issues">https://github.com/toema/prompt_alarm/issues</a> or write to <a href="mailto:m.toema20@gmail.com">m.toema20@gmail.com</a>.</p>
+</main></body></html>
