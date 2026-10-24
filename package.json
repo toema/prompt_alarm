@@ -1,0 +1,33 @@
+{
+  "name": "promptalarm",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Chrome extension that sends a scheduled prompt to your AI chat and retries until the usage limit resets.",
+  "license": "MIT",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:test": "node scripts/build.mjs --test",
+    "test:unit": "node --test \"test/unit/*.test.mjs\"",
+    "test:e2e": "node scripts/build.mjs --test && node test/e2e/run.mjs",
+    "test": "npm run test:unit && npm run test:e2e",
+    "store-assets": "node scripts/build.mjs && node scripts/store-assets.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.56.0",
+    "sharp": "^0.35.4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "toema <m.toema20@gmail.com>",
+  "homepage": "https://github.com/toema/prompt_alarm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/toema/prompt_alarm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/toema/prompt_alarm/issues",
+    "email": "m.toema20@gmail.com"
+  }
+}
